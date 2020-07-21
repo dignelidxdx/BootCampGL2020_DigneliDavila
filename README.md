@@ -1,4 +1,4 @@
-Hola estoy haciendo un cambio
+#Proyecto Maven para practicar
 
 
-Hola hice otro cambio desde readme
+Dentro del directorio BootcampGL2020 estaran ubicadas los ejercicios de práctica a la introducción al desarrollo!
