@@ -13,7 +13,7 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        ForEach ciclo = new ForEach();
+        ForEachDos ciclo = new ForEachDos();
 
         ciclo.main();
 
