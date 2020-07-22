@@ -2,6 +2,7 @@ package com.globallogic.app;
 
 import java.util.Scanner;
 
+import com.globallogic.app.entities.EmpleadoDemo;
 import com.globallogic.app.entities.StudentDetails;
 import com.globallogic.app.entities.VariableInstancia;
 /**
@@ -13,6 +14,8 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
+        EmpleadoDemo empleadoDemo = new EmpleadoDemo();
+        empleadoDemo.main();
 
         VariableInstancia vI = new VariableInstancia();
         vI.engPoints = 50;
