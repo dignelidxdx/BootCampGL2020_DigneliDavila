@@ -13,8 +13,8 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        CicloFor ciclo = new CicloFor();        
-      
+        CicloForDos ciclo = new CicloForDos();
+
         ciclo.main();
 
     }
