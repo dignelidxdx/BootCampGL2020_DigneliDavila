@@ -14,17 +14,25 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        EmpleadoDemo empleadoDemo = new EmpleadoDemo();
-        empleadoDemo.main();
+        
+        MensajeUsuario();
+        int numeroA = Teclado.nextInt();
+        int numeroB = Teclado.nextInt();
+        int suma = suma(numeroA, numeroB);
 
-        VariableInstancia vI = new VariableInstancia();
-        vI.engPoints = 50;
-        vI.mathsPoints = 80;
+        if(suma > 10) {
+            System.out.println("La suma de los numeros es Mayor a 10, resultado: " + suma);
+        } else System.out.println("La suma fue menor a 10");
+        
 
-        System.out.println("El valor de entProing es: " + vI.engPoints + " y el valor de mathsPoints es: " + vI.mathsPoints);
-      
     }
     public static void MensajeUsuario() {
-        System.out.println("Ingrese un numero");
+        System.out.println("Ingrese dos numeros");
+    }
+    public static int suma(int numero, int numeroDos) {
+
+        int suma = numero + numeroDos;
+
+        return suma;
     }
 }
