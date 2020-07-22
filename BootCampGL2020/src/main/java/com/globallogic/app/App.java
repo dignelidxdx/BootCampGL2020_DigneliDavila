@@ -1,5 +1,6 @@
 package com.globallogic.app;
 
+import com.globallogic.app.entities.StudentDetails;
 /**
  * Hello world!
  *
@@ -7,7 +8,11 @@ package com.globallogic.app;
 public class App 
 {
     public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    {        
+        StudentDetails estudiante = new StudentDetails();
+        estudiante.studentAge();
+
+       
+
     }
 }
