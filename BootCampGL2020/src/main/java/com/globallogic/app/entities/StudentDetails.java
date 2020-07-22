@@ -5,9 +5,9 @@ public class StudentDetails {
     
     public int age;
 
-    public void studentAge() {
+    public void studentAge(int numero) {
        
-        age = 0 + 5;        
+        age = 0 + numero;  
 
         System.out.println("La edad del estudiante es:" + age);
 
