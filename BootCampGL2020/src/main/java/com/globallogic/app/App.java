@@ -16,19 +16,22 @@ public class App
     {        
         
         MensajeUsuario();
-        int numeroA = Teclado.nextInt();
-        int numeroB = Teclado.nextInt();
-        int suma = suma(numeroA, numeroB);
-
-        if(suma > 10) {
-            System.out.println("La suma de los numeros es Mayor a 10, resultado: " + suma);
-        } else System.out.println("La suma fue menor a 10");
+        String letraUno = Teclado.nextLine();
+        String letraDos = Teclado.nextLine();
+       
+        if(esMayuscula(letraUno) || esMayuscula(letraDos)) {
+            System.out.println("Es una letra mayuscula");
+        } else System.out.println("No es letra mayuscula");
         
 
     }
     public static void MensajeUsuario() {
-        System.out.println("Ingrese dos numeros");
+        System.out.println("Ingrese dos letras");
     }
+    public static boolean esMayuscula(String s) {
+		// Regresa el resultado de comparar la original con su versión mayúscula
+		return s.equals(s.toUpperCase());
+	}
     public static int suma(int numero, int numeroDos) {
 
         int suma = numero + numeroDos;
