@@ -13,7 +13,7 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        WhileDos ciclo = new WhileDos();
+        ForEach ciclo = new ForEach();
 
         ciclo.main();
 
