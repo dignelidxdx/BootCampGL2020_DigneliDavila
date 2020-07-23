@@ -7,15 +7,24 @@ import com.globallogic.app.entities.*;
 /**
  * Ejercicio Introduccion al Desarrollo
  *
+ * Ejercicio 4.1 y 4.2 se hicieron aca
  */
 public class App 
 {
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        ForEachTres ciclo = new ForEachTres();
+        Electrodomestico electrodomestico = new Electrodomestico();
+        Heladera heladera = new Heladera();
+        heladera.apagar();
+        electrodomestico.encender();
+        heladera.capacidad = 50;
 
-        ciclo.main();
+        System.out.println(heladera.capacidad);
+
+
+
+       
 
     }
 
