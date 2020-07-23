@@ -15,13 +15,9 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        Gato gato = new Gato();
+        Berlina berlina = new Berlina();
 
-        gato.setPatas(4);    
-        gato.setNombre("Kobe");
-
-        System.out.println("El gato se llama " + gato.getNombre() + " y tiene " + gato.getPatas() + " patas.");
-       
+        berlina.avanzar();       
     }
 
 
