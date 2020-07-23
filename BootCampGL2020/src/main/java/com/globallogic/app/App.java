@@ -23,12 +23,24 @@ public class App
 
         heladera.capacidad = 2.5;
         heladera.color = "blanco";
-
         electrodomesticos.add(heladera);
+        heladera = new Heladera();
+        heladera.capacidad = 0.4;
+        heladera.color = "azul";
+        heladera.consumo = 6;
+        electrodomesticos.add(heladera);
+        televisor.color = "gris";
+        televisor.marca = "Samsung";
+        electrodomesticos.add(televisor);
+        cafetera.color = "blanco";
+        cafetera.litros = 3;
+        electrodomesticos.add(cafetera);
 
         System.out.println(electrodomesticos);
 
-        System.out.println(heladera.capacidad);
+        for (Electrodomestico electrico : electrodomesticos) {
+            electrico.encender();
+        }
        
 
     }
