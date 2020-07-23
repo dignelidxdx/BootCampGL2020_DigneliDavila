@@ -6,15 +6,15 @@ public class Heladera extends Electrodomestico {
     public boolean tieneFreezer;
     public double capacidadFreezer;
 
-    public String guardarElemento(){
-        System.out.println("Guardando elemento");
-        String cosa = "manzana";
-        return cosa;
+    public void guardarElementos(String elemento){
+        System.out.println("guardando elemento");
     }
-    public String extraerElemento(){
-        System.out.println("Extrayendo elemento");
-        String cosa = "manzana";
-        return cosa;
+    public void extraerElemento(String elemento){
+        System.out.println("extrayendo elemento");
+    }
+    @Override
+    public void encender(){
+        System.out.println("desde la heladera");
     }
 
 }

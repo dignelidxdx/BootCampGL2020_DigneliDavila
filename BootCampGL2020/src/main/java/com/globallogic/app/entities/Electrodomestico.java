@@ -2,10 +2,10 @@ package com.globallogic.app.entities;
 
 public class Electrodomestico {
 
-    String marca;
-    double peso;
-    char consumo;
-    String color;
+    public String marca;
+    public double peso;
+    public char consumo;
+    public String color;
 
     public void encender() {
         System.out.println("Encendiendo electrodoméstico");
@@ -13,6 +13,10 @@ public class Electrodomestico {
 
     public void apagar() {
         System.out.println("Apagando electrodoméstico");
+    }
+
+    public String toString() {
+        return "Color: " + this.color + " Marca: " + this.marca;
     }
     
 }
