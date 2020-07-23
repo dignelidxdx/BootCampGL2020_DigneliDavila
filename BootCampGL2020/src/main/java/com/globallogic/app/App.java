@@ -15,34 +15,13 @@ public class App
     public static Scanner Teclado = new Scanner (System.in);
     public static void main( String[] args )
     {        
-        Electrodomestico electro = new Electrodomestico();
-        Heladera heladera = new Heladera();
-        Televisor televisor = new Televisor();
-        Cafetera cafetera = new Cafetera();
-        ArrayList<Electrodomestico> electrodomesticos = new ArrayList();
+        Gato gato = new Gato();
 
-        heladera.capacidad = 2.5;
-        heladera.color = "blanco";
-        electrodomesticos.add(heladera);
-        heladera = new Heladera();
-        heladera.capacidad = 0.4;
-        heladera.color = "azul";
-        heladera.consumo = 6;
-        electrodomesticos.add(heladera);
-        televisor.color = "gris";
-        televisor.marca = "Samsung";
-        electrodomesticos.add(televisor);
-        cafetera.color = "blanco";
-        cafetera.litros = 3;
-        electrodomesticos.add(cafetera);
+        gato.setPatas(4);    
+        gato.setNombre("Kobe");
 
-        System.out.println(electrodomesticos);
-
-        for (Electrodomestico electrico : electrodomesticos) {
-            electrico.encender();
-        }
+        System.out.println("El gato se llama " + gato.getNombre() + " y tiene " + gato.getPatas() + " patas.");
        
-
     }
 
 
