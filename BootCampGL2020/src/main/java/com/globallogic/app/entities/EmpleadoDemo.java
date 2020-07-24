@@ -2,10 +2,10 @@ package com.globallogic.app.entities;
 
 public class EmpleadoDemo {
 
-    Empleado empleado = new Empleado();
+    EmpleadoDos empleado = new EmpleadoDos();
     public void main() {
 
-        Empleado.salario = 1000;
+        empleado.salario = 1000;
 
         System.out.println(empleado.nombre + " tiene un salario promedio de: " + empleado.salario);
     }
