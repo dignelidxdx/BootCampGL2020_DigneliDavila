@@ -1,4 +1,4 @@
-package com.globallogic.app.entities;
+package com.globallogic.app.entities.ClasesYObjetos;
 
 public class Persona {
 
@@ -8,19 +8,19 @@ public class Persona {
 
     
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 	public String getEstadoCivil() {
-		return estadoCivil;
+		return this.estadoCivil;
 	}
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
 	}
 	public int getNumeroDeHijos() {
-		return numeroDeHijos;
+		return this.numeroDeHijos;
 	}
 	public void setNumeroDeHijos(int numeroDeHijos) {
 		this.numeroDeHijos = numeroDeHijos;

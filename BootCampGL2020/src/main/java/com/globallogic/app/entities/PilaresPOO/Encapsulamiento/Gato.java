@@ -19,7 +19,6 @@ public class Gato {
 
     public void setPatas(int numeroPatas) {
         this.patas = numeroPatas;
-    }
-    
+    }    
     
 }
