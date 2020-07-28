@@ -1,5 +1,6 @@
 package com.globallogic.app.entities.ClasesYObjetos;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,11 +15,12 @@ public class PersonaManager {
     static Empleado empleadoMenosHorasExtras = new Empleado();
 
 
-    public static void main( String[] args ){  
+    public static void main( String[] args ) throws IOException{  
      
         PersonaManager manager = new PersonaManager();
         ArrayList<Empleado> empleadosOrdenados = gestionEmpleado();
 
+        //método para mostrar todos los empleados
         for (Object emp : empleadosOrdenados) {
             System.out.println(emp);
         }
@@ -32,14 +34,14 @@ public class PersonaManager {
 
         // Todos los empleados ordenados por salario de menor a mayor.
 
-        empleadosOrdenados.sort((e1, e2) -> Double.compare(((Empleado) e1).getSueldoBase(), ((Empleado) e2).getSueldoBase()));
+        // empleadosOrdenados.sort((e1, e2) -> Double.compare(((Empleado) e1).getSueldoBase(), ((Empleado) e2).getSueldoBase()));
       
         for (Empleado empleado : empleadosOrdenados) {
             System.out.println(empleado.getSueldoBase());
         }
     }
 
-    public static ArrayList<Empleado> gestionEmpleado() {
+    public static ArrayList<Empleado> gestionEmpleado() throws IOException {
 
         // El número total de empleados se pide por teclado.
         mensajeUsuario();
@@ -59,9 +61,8 @@ public class PersonaManager {
                 System.out.println("Introducir cantidad de hijos:");
                 int hijos = Teclado.nextInt();
                 empleado.setNumeroDeHijos(hijos);
-                System.out.println("Introducir estado civil: (C o S)");
-                String estadoCivil = Teclado.nextLine();
-                estadoCivil = Teclado.nextLine();
+                System.out.println("Eres Casado? (S/N): ");
+                char estadoCivil = (char) System.in.read();
                 empleado.setEstadoCivil(estadoCivil);
                 System.out.println("Introducir sueldo base:");
                 double sueldoUBase = Teclado.nextInt();
@@ -79,7 +80,7 @@ public class PersonaManager {
 
                 System.out.println("Para calcular retenciones introduzca el IRPF para calcular sobre sueldo bruto");
                 double retenciones = Teclado.nextDouble();
-                double calculoRetenciones = empleado.calculoRetenciones(retenciones);
+                double calculoRetenciones = empleado.calculoRetenciones(retenciones, empleado.getImporteHoraExtra(), empleado.getSueldoBase());
                 empleado.setTipoIRPF(calculoRetenciones);
                 
                 

@@ -72,9 +72,9 @@ public class Empleado extends Persona {
  	// que el porcentaje que hay que aplicar es el tipo menos 2 puntos si el empleado está casado y menos 1 punto adicional por
 	// cada hijo que tenga.
     
-	public double calculoRetenciones(double retenciones) {
+	public double calculoRetenciones(double retenciones, int importeHoraExtra, double sueldoBase) {
 		double retencionesActuales = 0;
-        if(this.getEstadoCivil() == "C") {
+        if(this.getEstadoCivil() == 's' || this.getEstadoCivil() == 'S') {
 			retencionesActuales = retenciones - 2;
 		}
 		if(this.getNumeroDeHijos() > 0) {
@@ -83,7 +83,7 @@ public class Empleado extends Persona {
 				retenciones = retencionesActuales;
 			}		
 		}
-		return retencionesActuales;
+		return sueldoBruto(importeHoraExtra, sueldoBase) * retencionesActuales / 100;
     }
 
     @Override
