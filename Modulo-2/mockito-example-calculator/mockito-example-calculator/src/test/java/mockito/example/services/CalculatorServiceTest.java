@@ -4,18 +4,18 @@
 package mockito.example.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-
-import com.sun.tools.javac.util.List;
+import org.mockito.internal.configuration.injection.MockInjection;
+import org.mockito.internal.creation.bytebuddy.MockAccess;
 
 import mockito.example.services.impl.CalculatorServiceImpl;
 
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockInjection.class)
 public class CalculatorServiceTest {
 	
 	@Mock
@@ -26,9 +26,8 @@ public class CalculatorServiceTest {
 	
 	@BeforeEach
 	 void setUp() {
-		basicOpSer.get
 		
-		(when(dataService.getListOfNumbers())).thenReturn(1, 2, 3, 4, 5);
+		((Object) when(dataService.getListOfNumbers())).thenReturn(1, 2, 3, 4, 5);
 		
 	}
 
