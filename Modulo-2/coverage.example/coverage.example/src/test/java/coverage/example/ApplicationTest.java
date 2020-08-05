@@ -17,39 +17,21 @@ class ApplicationTest {
 	
 
 	private static final String name = "Diana";
-	private Galaxy galaxy;
-	private Planet planet;
-	private Star star;
+	
+	
 	private Application app;
 	
-	
 	@Test
-	public void setUp() {
-		galaxy = new Galaxy(name);
-		
-		assertNotNull(galaxy.name);
+	void WhenMainExecutesThenOk() {
+		Application.main(null);
 	}
-	
-		
-	 @Test
-	 public void StarsOnGalaxy() {
-		
-		star.setColor("blanco");
-		star.setName("perlita");
 
-		galaxy.stars.add(star);
-		
-		assertEquals(name, galaxy.name);		
+	@Test
+	void WhenApplicationInstancesThenOk() {
+		Application app = new Application();
+		assertNotNull(app);
 	}
-	 
-	 @Test
-	 @DisplayName("Agregando nombre a Planeta")
-	 public void GetPlanetNameTest() {
-		
-		planet.setName("Mercurio");		
-		
-		assertNotNull(planet.getName());		
-	}	
+
 	
 	@ParameterizedTest
 	@MethodSource("star")

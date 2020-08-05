@@ -1,5 +1,6 @@
 package coverage.loteria;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -121,7 +122,26 @@ public class LoteriaTest {
 		Loteria loteria = new Loteria(20000, 1000, carton);  
         loteria.jugada();
         assertNotNull(loteria);
-    }
+	}
+	
+	@Test
+	void WhenJugadaThen() {
+		Loteria loteria = new Loteria(100, 1000, new CartonGenerator());
+		
+		assertFalse(loteria.hayGanadorUnico());   // No hay ganadores por que no se jugo
+		assertFalse(loteria.hayCuadrupleGanador()); 
+		assertEquals(1000,loteria.getBoletos()); // Hay un total de 1000 boletos disponibles a jugarse
+		assertEquals(100,loteria.getPozo());
+		assertEquals(0,loteria.getGanadores());
+		loteria.jugada();	
+
+		// Es poco probable que haya ganadores
+		assertEquals(0,loteria.getGanadores());
+		assertFalse(loteria.hayGanadorUnico());   
+		assertFalse(loteria.hayCuadrupleGanador()); 
+		assertEquals(0,loteria.getBoletos()); 
+		assertEquals(100,loteria.getPozo());
+	}
     
 
 }
