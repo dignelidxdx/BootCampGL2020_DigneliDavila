@@ -1,4 +1,4 @@
-package com.globallogic.myapp;
+package com.globallogic.bootcamp.patterns;
 
 import static org.junit.Assert.assertTrue;
 

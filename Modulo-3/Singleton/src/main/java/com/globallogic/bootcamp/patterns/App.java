@@ -1,4 +1,4 @@
-package com.globallogic.myapp;
+package com.globallogic.bootcamp.patterns;
 
 /**
  * Hello world!
